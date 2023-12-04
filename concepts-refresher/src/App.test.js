@@ -1,13 +1,15 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 import {calculator} from './addition.js';
-import {StringTransformer} from './stringtransformer.js';
+import StringTransformer from './stringtransformer.js';
 
 //reading the file that's being tested
 const app = require('./addition') //variable represents app.js file.
 
 //put in nums to be calculated wiht the objects.
 let cal = new calculator(4, 6)
+
+let transformer = new StringTransformer(); //for stringtransform.js
 
 
 //testing functions.
@@ -67,7 +69,7 @@ test("The calculator can return the square root of a number",() =>
 
 test( "String is returned backwards", () =>
   {
-    let tranformer = new StringTransformer;
-    expect(transformer.backwards("hello")).toBe("elloh")
+   
+    expect(transformer.backwards("hello")).toBe("olleh");
   }
 )
