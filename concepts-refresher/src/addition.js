@@ -1,3 +1,4 @@
+//Main class with functions/methods being tested
 export class calculator{
     constructor(augend, addend){
         this.augend = augend
@@ -12,8 +13,35 @@ export class calculator{
         return this.augend * this.addend;
     }
 
-    change(){
+    changeInput(x, y){
         
+
+        this.augend = x;
+        this.addend = y;
+
+        
+        
+    }
+
+    divide(){
+        return this.augend / this.addend;
+    }
+
+   greater(){
+    if(this.augend > this.addend){
+        return this.augend;
+    }else{
+        return this.addend;
+    }
+   }
+
+   cube(){
+        
+        return (this.augend * this.augend) * this.augend;
+    }
+
+    sqrRoot(){
+        return this.augend = Math.sqrt(this.augend);
     }
 
 }
@@ -21,5 +49,5 @@ export class calculator{
 
 
 
-
-module.exports = {calculator}; //being tested
+//being exported to the app.test file
+module.exports = {calculator}; 
