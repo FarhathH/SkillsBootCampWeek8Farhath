@@ -67,6 +67,7 @@ test("The calculator can return the square root of a number",() =>
   }
 )
 
+//testing that the string comes out backwards
 test( "String is returned backwards", () =>
   {
    
