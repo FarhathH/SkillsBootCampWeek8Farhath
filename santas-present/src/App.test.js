@@ -1,8 +1,9 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
+import './santa';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+test("First repeated ID is returned", () => 
+  {
+    expect(repeatedID).toBe(2);
+  }
+);
