@@ -19,14 +19,16 @@ export class Converter{ //class for converting currencies
         this.tables = [];
     }
 
-    addTable(table){
-      this.tables.push(table);
-    }
+   
 
     exchange(money, currency){
-        let exchangeTable = this.tables.find((element) => element.currency === currency)
-        let exchangeValue = exchangeTable.table[money.currency]
-        return new Money(currency, money.value * exchangeValue)
+        let exchangeTable = this.tables.find((element) => element.currency === money.currency)
+        let exchangeValue = exchangeTable.table[currency]
+        return new Money(money.value * exchangeValue, currency)
+    }
+
+    addTable(table){
+        this.tables.push(table);
     }
 }
 

@@ -74,12 +74,7 @@ test("Money has currency",()=>
   
 )
 
-let values = {
-  'usd':1.26,
-  'gbp':0.79
-}
 
-let currentTable = new CurrencyTable('usd',values);
 
 test("Currency table has values", ()=>
   { 
@@ -102,13 +97,21 @@ test("gbp can be found by string", ()=>
   }
 )
 
+let values = { //list to view currency and value
+  'eur':1.26,
+  'gbp' :0.79
+  
+}
+
+let currentTable = new CurrencyTable('usd',values);
+
 test("Currency can be converted", () =>
   {
     let converter = new Converter();
     converter.addTable(currentTable);
-    let dollar = converter.exchange(MoneyFactory.pound(1), 'usd');
+    let dollar = converter.exchange(MoneyFactory.UsDollar(1), 'eur');
     expect(dollar.value).toBe(1.26)
-    expect(dollar.currency).toBe('usd')
+    expect(dollar.currency).toBe('eur')
   }
 )
 
