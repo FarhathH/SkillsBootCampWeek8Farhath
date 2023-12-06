@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
-import {CurrencyTable, Converter, Money, MoneyFactory} from './money';
+import {RateContext, TestRateContext, CurrencyTable, Converter, Money, MoneyFactory} from './money';
 
 
 /*
@@ -8,6 +8,7 @@ import {CurrencyTable, Converter, Money, MoneyFactory} from './money';
   Test samples to check if components work.
 
 */
+
 
 
 test("Money has value", ()=>
@@ -113,5 +114,28 @@ test("Currency can be converted", () =>
     expect(dollar.value).toBe(1.26)
     expect(dollar.currency).toBe('eur')
   }
+)
+
+let dummyRates = { //
+  base:'USD',
+  rates:
+  {
+    'GBP':1.2,
+    'EUR':2.3,
+    'HKD':2.5
+  }
+}
+
+test("context can make rates lower case", () =>
+  {
+   let context = new TestRateContext(dummyRates);
+   let currentTable = context.getRates('usd');
+
+   expect(currentTable.currency).toBe('usd');
+   expect(currentTable.table['gbp']).toBe(1.2)
+   expect(currentTable.table['eur']).toBe(2.3)
+   expect(currentTable.table['hkd']).toBe(2.5)
+  }
+
 )
 
