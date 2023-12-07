@@ -2,6 +2,7 @@
     Represents the 
 */
 export class Sim{
+    //attributes for the character
     constructor(name, age, location, friends){
         this.name = name
         this.age = age
