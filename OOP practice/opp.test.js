@@ -1,4 +1,4 @@
-import Sim from './oop';
+import {Sim, BankAccount} from './oop';
 
 // //function to add digits
 // function addThree(num1, num2, num3){

@@ -2,7 +2,7 @@
     Represents the character overall
 */
 
-export class Sim{
+class Sim{
     //attributes for the character
     constructor(name, age, location, friends){
         this.name = name
@@ -61,3 +61,26 @@ console.log(p2.friends)
 //used method to add Tom as a friend
 p1.makeNewFriend("Tom")
 console.log(p1.friends)
+
+//represents bank account
+class BankAccount{
+    //takes in sortcode and returns info linked to bank account
+    constructor(sortCode){
+        this.sortCode = sortCode
+        this.accountNo = Math.floor(Math.random()*1000000)
+        this.balance = (Math.random()*1000000).toFixed(2)
+    }
+    
+    getAccountNo(){
+        return this.accountNo
+    }
+}
+
+//instantiated a new object
+let acc1 = new BankAccount("02-34-65");
+
+//printing the info
+console.log(acc1.accountNo)
+console.log(acc1.balance)
+
+export default{Sim, BankAccount}
