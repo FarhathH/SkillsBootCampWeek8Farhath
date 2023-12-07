@@ -28,6 +28,7 @@ import Sim from './sim';
 // //test
 // console.assert(actualOutput == expectedOutput, "it didn't work")
 
+//made for testing the lifeStory method
 let expectedStory = `Hello, my name is Dummy. I am years 26 old and live in Yokai`
 let realStory = testSim.getLifeStory()
 

@@ -1,4 +1,6 @@
-/*Sim.js file template*/
+/*
+    Represents the 
+*/
 export class Sim{
     constructor(name, age, location, friends){
         this.name = name
@@ -18,6 +20,7 @@ export class Sim{
        this.friends.push(newFriend)
     }
     
+    //for the characters brief life story
     getLifeStory(){
         
         console.log(`Hello, my name is ${this.name}. I am years ${this.age} old and live in ${this.location}`)
