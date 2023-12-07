@@ -1,5 +1,5 @@
 /*Sim.js file template*/
-class Sim{
+export class Sim{
     constructor(name, age, location, friends){
         this.name = name
         this.age = age
