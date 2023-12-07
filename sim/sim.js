@@ -1,6 +1,7 @@
 /*
-    Represents the 
+    Represents the character overall
 */
+
 export class Sim{
     //attributes for the character
     constructor(name, age, location, friends){
