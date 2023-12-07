@@ -19,7 +19,7 @@ import {Sim, BankAccount} from './oop';
 // console.assert(actualOutput == expectedOutput, failedMessage)
 
 //instantiate a new object from class
-// let testSim = new Sim("Dummy", 26, "Yokai");
+let testSim = new Sim("Dummy", 26, "Yokai");
 
 // //use to check if output is correct
 // let expectedOutput = 27
@@ -34,3 +34,7 @@ let realStory = testSim.getLifeStory()
 
 //test
 console.assert(realStory == expectedStory, "it didn't work")
+
+//another test object
+let testBankAcc = new BankAccount("45-23-16");
+
