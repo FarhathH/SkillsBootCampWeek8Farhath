@@ -19,11 +19,17 @@ import Sim from './sim';
 // console.assert(actualOutput == expectedOutput, failedMessage)
 
 //instantiate a new object from class
-let testSim = new Sim("Dummy", 26, "Yokai");
+// let testSim = new Sim("Dummy", 26, "Yokai");
 
-//use to check if output is correct
-let expectedOutput = 27
-let actualOutput = testSim.haveBirthday();
+// //use to check if output is correct
+// let expectedOutput = 27
+// let actualOutput = testSim.haveBirthday();
+
+// //test
+// console.assert(actualOutput == expectedOutput, "it didn't work")
+
+let expectedStory = `Hello, my name is Dummy. I am years 26 old and live in Yokai`
+let realStory = testSim.getLifeStory()
 
 //test
-console.assert(actualOutput == expectedOutput, "it didn't work")
+console.assert(realStory == expectedStory, "it didn't work")
