@@ -71,8 +71,14 @@ class BankAccount{
         this.balance = (Math.random()*1000000).toFixed(2)
     }
     
+    //returns account number
     getAccountNo(){
         return this.accountNo
+    }
+
+     //adding to total balance
+     getDeposit(amount){
+        return this.balance += amount;
     }
 }
 
