@@ -14,4 +14,4 @@ let expectedOutput = 6
 let actualOutput = addThree(num1, num2, num3)
 
 //the test which should have worked
-console.assert(actualOutput == expectedOutput,{failedMessage})
+console.assert(actualOutput == expectedOutput, failedMessage)
