@@ -18,5 +18,12 @@ import Sim from './sim';
 // //the test which should have worked
 // console.assert(actualOutput == expectedOutput, failedMessage)
 
-//made new object
-let sim1 = new Sim();
+//instantiate a new object from class
+let testSim = new Sim("Dummy", 26, "Yokai");
+
+//use to check if output is correct
+let expectedOutput = 27
+let actualOutput = testSim.haveBirthday();
+
+//test
+console.assert(actualOutput == expectedOutput, "it didn't work")
