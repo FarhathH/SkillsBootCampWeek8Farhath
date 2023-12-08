@@ -50,15 +50,15 @@ class Truck extends Vehicle{ //for truck attributes
 }
 
 class VehicleFactory{ // saves the trouble of instantiating objects
-    static Car(model, brand){
+    static Car(brand, model){
         return new Car(model, brand, 4)
     }
     
-    static Bus(model, brand){
+    static Bus(brand, model){
         return new Bus(model, brand, 40)
     }
     
-    static Truck(model, brand){
+    static Truck(brand, model){
         return new Truck(model, brand, 2)
     }
     
