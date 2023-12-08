@@ -33,7 +33,7 @@ class Truck extends Vehicle{ //for truck attributes
     speed = 40
     constructor(brand, model, passengerNo){
         super(brand, model, passengerNo); //should enable mother class attributes.
-        this.cargo = []
+        this.cargo = [] //carries total cargo
         
     }
     
@@ -49,7 +49,7 @@ class Truck extends Vehicle{ //for truck attributes
 //instantiated objects
 let t1 = new Truck("Scania", "Curtain Side", 2);
 let c1 = new Car("Seat", "Hatchback", 5);
-let b1 = new Bus();
+let b1 = new Bus("First", "Double decker", 40);
 
 //called it
 console.log(t1.model)
