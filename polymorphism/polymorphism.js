@@ -8,7 +8,7 @@ class Vehicle{//for vehicle attributes
   
 }
 
-class Bus extends Vehicle{ //class for bus
+class Bus extends Vehicle{ //class for bus attributes
     speed = 23
     constructor(brand, model, passengerNo){
         super(brand, model, passengerNo)
@@ -28,7 +28,7 @@ class Car extends Vehicle{ //for car attributes
     }
 }
 
-class Truck extends Vehicle{ //for truck
+class Truck extends Vehicle{ //for truck attributes
 
     speed = 40
     constructor(brand, model, passengerNo){
