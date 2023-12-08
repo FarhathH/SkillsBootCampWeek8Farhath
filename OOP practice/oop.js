@@ -86,6 +86,7 @@ class BankAccount{
 let acc1 = new BankAccount("02-34-65");
 
 //printing the info
+console.log(acc1)
 console.log(acc1.accountNo)
 console.log(acc1.balance)
 
