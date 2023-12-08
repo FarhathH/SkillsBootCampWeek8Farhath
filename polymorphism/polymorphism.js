@@ -19,10 +19,10 @@ class Truck extends Vehicle{ //for truck
 }
 
 //instantiated object
-let v1 = new Truck("Scania", "Curtain Side", 2);
+let t1 = new Truck("Scania", "Curtain Side", 2);
 
 //called it
-console.log(v1.model)
+console.log(t1.model)
 
 //allowing truck to make a sound
 v1.MakeSound()
